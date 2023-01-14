@@ -9,3 +9,10 @@ const changeCaptializationArrow = (string) => {
 	return inversedLetters.join('');
 }
 
+// Q6
+function endsWithScript(string) {
+	return string.endsWith('Script');
+}
+
+const endsWithScriptArray = (string) => string.endsWith('Script');
+
