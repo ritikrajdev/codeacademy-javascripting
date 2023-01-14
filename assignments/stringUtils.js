@@ -16,3 +16,18 @@ function endsWithScript(string) {
 
 const endsWithScriptArray = (string) => string.endsWith('Script');
 
+
+// Q7
+function countVowels(string) {
+	let numOfVowels = 0;
+	string.split('').forEach(char => numOfVowels += 'aeiou'.includes(char))
+	return numOfVowels;
+}
+
+
+const countVowelsArrow = (string) => {
+	let numOfVowels = 0;
+	string.split('').forEach(char => numOfVowels += 'aeiou'.includes(char))
+	return numOfVowels;
+}
+
