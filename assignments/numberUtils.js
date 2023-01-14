@@ -16,3 +16,15 @@ const isArmstrong = (n) => {
 	return n == sum
 }
 
+
+// Q2
+function checkAllDigitSame(num) {
+	const numString = String(num);
+	return numString === numString[0].repeat(numString.length);
+}
+
+const checkAllDigitSameArrow = (num) => {
+	const numString = String(num);
+	return numString === numString[0].repeat(numString.length);
+}
+
