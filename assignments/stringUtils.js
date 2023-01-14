@@ -31,3 +31,18 @@ const countVowelsArrow = (string) => {
 	return numOfVowels;
 }
 
+
+// Q8
+const asciiLowercase = 'abcdefghijklmnopqrstuvwxyz';
+const asciiUppercase = asciiLowercase.toUpperCase()
+
+function encryptCaesarCipherKey1(string) {
+	let individualEncodedChars = string.split('').map(char => asciiLowercase[(asciiLowercase.indexOf(char) + 1) % 26]);
+	return individualEncodedChars.join('');
+}
+
+const encryptCaesarCipherKey1Arrow = (string) => {
+	let individualEncodedChars = string.split('').map(char => asciiLowercase[(asciiLowercase.indexOf(char) + 1) % 26]);
+	return individualEncodedChars.join('');
+}
+
