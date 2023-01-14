@@ -12,3 +12,19 @@ const maxLengthStringArrow = (arrayOfString) => {
 	return maximumLengthString;
 }
 
+// Q7
+function concatWithoutFirstCharacter(arrayOfStrings) {
+	let concatenatedString = '';
+	arrayOfStrings.forEach(string => {
+		concatenatedString += string.slice(1);
+	});
+	return concatenatedString;
+}
+
+const concatWithoutFirstCharacterArrow = (arrayOfStrings) => {
+	let concatenatedString = '';
+	arrayOfStrings.forEach(string => {
+		concatenatedString += string.slice(1);
+	});
+	return concatenatedString;
+}
