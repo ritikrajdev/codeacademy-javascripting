@@ -19,5 +19,8 @@
   "homepage": "https://github.com/ritikrajdev/codeacademy-javascripting#readme",
   "devDependencies": {
     "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "husky": "^8.0.3"
   }
 }
