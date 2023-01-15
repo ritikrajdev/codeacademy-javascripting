@@ -17,4 +17,7 @@ const largestEvenNumberArrow = (arrayOfNums) => {
 	return largestEvenNumber;
 }
 
-
+module.exports = {
+	largestEvenNumber,
+	largestEvenNumberArrow
+}

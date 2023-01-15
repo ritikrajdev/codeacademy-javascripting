@@ -28,3 +28,10 @@ const checkAllDigitSameArrow = (num) => {
 	return numString === numString[0].repeat(numString.length);
 }
 
+module.exports = {
+	isPrime,
+	isArmstrong,
+
+	checkAllDigitSame,
+	checkAllDigitSameArrow
+}

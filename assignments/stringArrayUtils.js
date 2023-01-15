@@ -28,3 +28,11 @@ const concatWithoutFirstCharacterArrow = (arrayOfStrings) => {
 	});
 	return concatenatedString;
 }
+
+module.exports = {
+	maxLengthString,
+	maxLengthStringArrow,
+
+	concatWithoutFirstCharacter,
+	concatWithoutFirstCharacterArrow
+}

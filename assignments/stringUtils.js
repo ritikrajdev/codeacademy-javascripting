@@ -14,7 +14,7 @@ function endsWithScript(string) {
 	return string.endsWith('Script');
 }
 
-const endsWithScriptArray = (string) => string.endsWith('Script');
+const endsWithScriptArrow = (string) => string.endsWith('Script');
 
 
 // Q7
@@ -46,3 +46,18 @@ const encryptCaesarCipherKey1Arrow = (string) => {
 	return individualEncodedChars.join('');
 }
 
+
+module.exports = {
+	changeCaptialization,
+	changeCaptializationArrow,
+
+	endsWithScript,
+	endsWithScriptArrow,
+
+	countVowels,
+	countVowelsArrow,
+
+	encryptCaesarCipherKey1,
+	encryptCaesarCipherKey1Arrow
+
+}

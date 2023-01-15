@@ -1,3 +1,5 @@
+// could've only relied completely on json but isn't too usable in such small project
+
 function createTestsForFunction(func, testcases, testDescription=undefined) {
 	// 	testcases: [
 	// 		{listOfargs, ans, testCaseDescription}
