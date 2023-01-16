@@ -1,5 +1,5 @@
 const {UnsupportedTypeError} = require('../../errors');
-const {nTimesNumber, filterEvenNumbers} = require('../../classwork/arrayUtils');
+const {nTimesNumber, filterEvenNumbers, nTimesAndFilterEven} = require('../../classwork/arrayUtils');
 
 describe('Array utils', () => {
   describe('nTimesNumber', () => {
@@ -35,6 +35,24 @@ describe('Array utils', () => {
 
     it('Should return 2,4  when input is 1,2,3,4', () => {
       expect(filterEvenNumbers([1, 2, 3, 4])).toEqual([2, 4]);
+    });
+  });
+
+  describe('nTimesAndFilterEven with n = 3', () => {
+    it('Should through UnsupportedTypeError when input is not an array', () => {
+      expect(() => {nTimesAndFilterEven('abc');}).toThrow(UnsupportedTypeError);
+    });
+
+    it('Should through UnsupportedTypeError when input is not an array of numbers', () => {
+      expect(() => {nTimesAndFilterEven(['abc']);}).toThrow(UnsupportedTypeError);
+    });
+
+    it('Should through UnsupportedTypeError when multiplier is not a number', () => {
+      expect(() => {nTimesAndFilterEven(['abc'], 'x');}).toThrow(UnsupportedTypeError);
+    });
+
+    it('Should return [6]  when input is 1,2,3', () => {
+      expect(nTimesAndFilterEven([1, 2, 3])).toEqual([6]);
     });
   });
 });
