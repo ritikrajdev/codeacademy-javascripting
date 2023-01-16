@@ -1,15 +1,21 @@
 const {UnsupportedTypeError} = require('../errors');
 
-const doubleNumbers = (numbers) => {
-  if (!Array.isArray(numbers)) {
-    throw new UnsupportedTypeError('this datatype of input is not supported');
+const isArrayOfNumbers = (numbers) => Array.isArray(numbers) && numbers.every(num => Number.isFinite(num));
+
+const nTimesNumber = (numbers, multiplier=2) => {
+  if (!Number.isFinite(multiplier) || !isArrayOfNumbers(numbers)) {
+    throw new UnsupportedTypeError('this datatype is not supported');
   }
 
-  if (!numbers.every(num => Number.isFinite(num))) {
-    throw new UnsupportedTypeError('this datatype of input is not supported');
-  }
-
-  return numbers.map(num => 2 * num);
+  return numbers.map(num => multiplier * num);
 };
 
-module.exports = {doubleNumbers};
+const filterEvenNumbers = (numbers) =>{
+  if (!isArrayOfNumbers(numbers)) {
+    throw new UnsupportedTypeError('this datatype is not supported');
+  }
+
+  return numbers.filter(num => num % 2 === 0);
+};
+
+module.exports = {nTimesNumber, filterEvenNumbers};
